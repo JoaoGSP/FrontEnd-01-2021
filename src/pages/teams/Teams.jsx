@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Card, Col, Row} from 'react-bootstrap'
+import { Card, Col, Row } from 'react-bootstrap'
 import { FaPlus, FaRegTrashAlt } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Box from '../../elements/Box'

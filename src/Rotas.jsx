@@ -32,7 +32,7 @@ const Rotas = () => {
                 <Route exact path="/referees/:id" component={RefereesForm} />
                 <Route exact path="/games" component={Games} />
                 <Route exact path="/games/create" component={GamesForm} />
-                <Route exact path="/games/:id" component={GamesForm} /> 
+                <Route exact path="/games/:id" component={GamesForm} />
             </Switch>
         </Container>
     )

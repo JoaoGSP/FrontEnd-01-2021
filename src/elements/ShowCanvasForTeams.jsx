@@ -1,8 +1,13 @@
 import Button from 'react-bootstrap/Button'
 import React, { useState } from "react";
 import { ListGroup, Offcanvas } from "react-bootstrap";
-import { FaEdit } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { BiWorld } from 'react-icons/bi';
+import { FaEdit } from 'react-icons/fa';
+import { GiSittingDog, GiSoccerField } from 'react-icons/gi'
+import { AiOutlineStar, AiOutlineCalendar } from 'react-icons/ai'
+import { MdOutlinePermIdentity } from 'react-icons/md'
+import { HiOutlineIdentification } from 'react-icons/hi'
 
 const ShowCanvasForTeams = (props) => {
     const [show, setShow] = useState(false);
@@ -12,10 +17,10 @@ const ShowCanvasForTeams = (props) => {
 
     const FancyLink = React.forwardRef(({ navigate, ...props }, ref) => {
         return (
-            <Button ref={ref} {...props}><FaEdit title="Editar"/> {props.children}</Button>
+            <Button ref={ref} {...props}><FaEdit title="Editar" /> {props.children}</Button>
 
         )
-      })
+    })
 
     return (
         <>
@@ -27,25 +32,22 @@ const ShowCanvasForTeams = (props) => {
 
             <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
-                    <Offcanvas.Title variant="text-center">{props.nome}</Offcanvas.Title>
+                    <Offcanvas.Title variant="text-center"><HiOutlineIdentification />{' '}{props.nome}</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <ListGroup>
-                        <ListGroup.Item>{props.nome}</ListGroup.Item>
-                        <ListGroup.Item>{props.corprim}</ListGroup.Item>
-                        <ListGroup.Item>{props.corsec}</ListGroup.Item>
-                        <ListGroup.Item>{props.mascote}</ListGroup.Item>
-                        <ListGroup.Item>{props.estadio}</ListGroup.Item>
-                        <ListGroup.Item>{props.fundacao}</ListGroup.Item>
-                        <ListGroup horizontal>
-                        <ListGroup.Item>{props.cidade}</ListGroup.Item>
-                        <ListGroup.Item>{props.estado}</ListGroup.Item>
-                        </ListGroup>
-                        <ListGroup.Item>{props.presidente}</ListGroup.Item>
+                        <ListGroup.Item action variant='dark'><MdOutlinePermIdentity />{' '}{props.nome}</ListGroup.Item>
+                        <ListGroup.Item action variant='dark'>{props.corprim}</ListGroup.Item>
+                        <ListGroup.Item action variant='dark'>{props.corsec}</ListGroup.Item>
+                        <ListGroup.Item action variant='dark'><GiSittingDog />{' '}{props.mascote}</ListGroup.Item>
+                        <ListGroup.Item action variant='dark'><GiSoccerField />{' '}{props.estadio}</ListGroup.Item>
+                        <ListGroup.Item action variant='dark'><AiOutlineCalendar />{' '}{props.fundacao}</ListGroup.Item>
+                        <ListGroup.Item action variant='dark'><BiWorld />{' '}{props.cidade}{' '}{props.estado}</ListGroup.Item>
+                        <ListGroup.Item action variant='dark'><AiOutlineStar />{' '}{props.presidente}</ListGroup.Item>
                     </ListGroup>
 
                     <div className="d-grid gap-2">
-                        <Link variant="outline-primary" to={'/teams/' + props.idx} component={FancyLink} />                        
+                        <Link variant="outline-primary" to={'/teams/' + props.idx} component={FancyLink} />
                     </div>
                 </Offcanvas.Body>
             </Offcanvas>

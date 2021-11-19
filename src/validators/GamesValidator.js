@@ -3,11 +3,17 @@ import messages from "./messages";
 const GamesValidator = {
   timecasa: {
     required: messages.required,
-    maxLength: { value: 50, message: messages.maxLength }
+    maxLength: {
+      value: 50,
+      message: messages.maxLength
+    }
   },
   timevisitante: {
     required: messages.required,
-    maxLength: { value: 50, message: messages.maxLength }
+    maxLength: {
+      value: 50,
+      message: messages.maxLength
+    }
   },
   horario: {
     required: messages.required

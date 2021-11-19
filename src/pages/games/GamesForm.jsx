@@ -14,7 +14,7 @@ const GamesForm = (props) => {
     const { register, handleSubmit, setValue, formState: { errors } } = useForm()
 
     useEffect(() => {
-        
+
         let id
         props.match.params.id ? id = props.match.params.id : console.log(props);
 
@@ -63,7 +63,7 @@ const GamesForm = (props) => {
                     <Form.Group as={Row} className="mb-3" controlId="horario">
                         <Form.Label column sm={2}>Horário: </Form.Label>
                         <Col sm={10}>
-                            <Form.Control type="text" {...register("horario", validador.horario)} mask="99:99"  onChange={handleChange}/>
+                            <Form.Control type="text" {...register("horario", validador.horario)} mask="99:99" onChange={handleChange} />
                             {errors.horario && <span className="text-danger">{errors.horario.message}</span>}
                         </Col>
                     </Form.Group>

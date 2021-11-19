@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Table } from 'react-bootstrap'
-import { FaEdit,  FaPlus, FaRegTrashAlt } from 'react-icons/fa'
+import { FaEdit, FaPlus, FaRegTrashAlt } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Box from '../../elements/Box'
 import ShowInfoForGames from '../../elements/ShowInfoForGames'
@@ -13,11 +13,11 @@ const Games = () => {
 
     const FancyLink = React.forwardRef(({ navigate, ...props }, ref) => {
         return (
-          <a ref={ref} {...props}><FaEdit title="Editar" /> {props.children}</a>
+            <a ref={ref} {...props}><FaEdit title="Editar" /> {props.children}</a>
         )
-      })
-      
-      
+    })
+
+
 
     useEffect(() => {
         const games = GamesService.getAll()
@@ -51,16 +51,16 @@ const Games = () => {
                                 <td>{game.timevisitante}</td>
                                 <td>
                                     <div className="row row-cols-3">
-                                    <ShowInfoForGames 
-                                    timecasa={game.timecasa}
-                                    timevisitante={game.timevisitante}
-                                    horario={game.horario}
-                                    date={game.date}
-                                    estadio={game.estadio}
-                                    arbitragem={game.arbitragem}
-                                    />
-                                    <Link to={'/games/' + idx} component={FancyLink} />
-                                    <FaRegTrashAlt className="text-danger" onClick={() => trash(idx)} title="Excluir" />
+                                        <ShowInfoForGames
+                                            timecasa={game.timecasa}
+                                            timevisitante={game.timevisitante}
+                                            horario={game.horario}
+                                            date={game.date}
+                                            estadio={game.estadio}
+                                            arbitragem={game.arbitragem}
+                                        />
+                                        <Link to={'/games/' + idx} component={FancyLink} />
+                                        <FaRegTrashAlt className="text-danger" onClick={() => trash(idx)} title="Excluir" />
                                     </div>
                                 </td>
                             </tr>

@@ -12,11 +12,11 @@ const TeamsForm = (props) => {
 
 
     const { register, handleSubmit, setValue, formState: { errors } } = useForm()
-    
+
     useEffect(() => {
-        
+
         const id = props.match.params.id
-        
+
         if (id) {
             const team = TeamsService.get(id)
             for (let field in team) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container,Nav, Navbar, Offcanvas } from 'react-bootstrap'
+import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const Menu = () => {
@@ -22,27 +22,27 @@ const Menu = () => {
                         <Nav className="navbar bg-light">
                             <Nav.Item>
                                 <Nav.Link eventKey="2" as={Link} to="/teams">
-                                Times
+                                    Times
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link eventKey="1" as={Link} to="/players">
-                                Jogadores
+                                    Jogadores
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link eventKey="3" as={Link} to="/coaches">
-                                Comissão Técnica
+                                    Comissão Técnica
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link eventKey="4" as={Link} to="/referees">
-                                Arbitragem
+                                    Arbitragem
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link eventKey="5" as={Link} to="/games">
-                                Jogos
+                                    Jogos
                                 </Nav.Link>
                             </Nav.Item>
                         </Nav>
