@@ -1,6 +1,13 @@
 import messages from "./messages";
 
 const TeamsValidator = {
+  alcunha: {
+    required: messages.required,
+    maxLength: {
+      value: 50,
+      message: messages.maxLength
+    },
+  },
   nome: {
     required: messages.required,
     maxLength: {

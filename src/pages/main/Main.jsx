@@ -21,16 +21,14 @@ const Main = (props) => {
                   </Card.Subtitle>
                   <Card.Text >
                     <p>
-                      Trabalho realizado como requisito para obtenção parcial de
+                      Projeto apresentado ao Instituto de Educação Superior de Brasília - IESB
+                      como requisito para obtenção parcial de
                       nota na disciplina de Projeto Integrado - FrontEnd.
                     </p>
                     <strong>Profº:</strong> Orion Teles de Mesquita
                     <p></p>
                     <strong>Acadêmico:</strong> João Guilherme Santiago Pereira
                     - 2014290013
-                    <p>
-                      <strong>Let's code ;) </strong>
-                    </p>
                   </Card.Text>
                 </Card.Body>
               </Card>

@@ -32,13 +32,13 @@ const ShowCanvasForTeams = (props) => {
 
             <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
-                    <Offcanvas.Title variant="text-center"><HiOutlineIdentification />{' '}{props.nome}</Offcanvas.Title>
+                    <Offcanvas.Title variant="text-center"><HiOutlineIdentification />{' '}{props.alcunha}</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <ListGroup>
                         <ListGroup.Item action variant='dark'><MdOutlinePermIdentity />{' '}{props.nome}</ListGroup.Item>
-                        <ListGroup.Item action variant='dark'>{props.corprim}</ListGroup.Item>
-                        <ListGroup.Item action variant='dark'>{props.corsec}</ListGroup.Item>
+                        <ListGroup.Item action style={{backgroundColor: props.corprim}} variant='dark'>{props.corprim}</ListGroup.Item>
+                        <ListGroup.Item action style={{backgroundColor: props.corsec}} variant='dark'>{props.corsec}</ListGroup.Item>
                         <ListGroup.Item action variant='dark'><GiSittingDog />{' '}{props.mascote}</ListGroup.Item>
                         <ListGroup.Item action variant='dark'><GiSoccerField />{' '}{props.estadio}</ListGroup.Item>
                         <ListGroup.Item action variant='dark'><AiOutlineCalendar />{' '}{props.fundacao}</ListGroup.Item>

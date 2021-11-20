@@ -50,6 +50,13 @@ const PlayersForm = (props) => {
                             {errors.nome && <span className="text-danger">{errors.nome.message}</span>}
                         </Col>
                     </Form.Group>
+                    <Form.Group as={Row} className="mb-3" controlId="nome">
+                        <Form.Label column sm={2}>Alcunha: </Form.Label>
+                        <Col sm={10}>
+                            <Form.Control type="text" {...register("alcunha", validador.alcunha)} />
+                            {errors.alcunha && <span className="text-danger">{errors.alcunha.message}</span>}
+                        </Col>
+                    </Form.Group>
                     <FormGroup as={Row} className="mb-3" controlId="gender">
                         <Form.Label column={2}>Sexo: </Form.Label>
                         <Col sm={10}>

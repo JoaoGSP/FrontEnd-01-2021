@@ -45,8 +45,15 @@ const Coaches = () => {
                   <ListGroup as="ol">
                     <ListGroup.Item
                       as="li"
-                      className="d-flex justify-content-between align-items-start text-center"
-                    >
+                      className="d-flex justify-content-between align-items-start text-center">
+                      <div className="ms-auto me-auto">
+                        <div className="fw-bold">{coach.time}</div>
+                        Time
+                      </div>
+                    </ListGroup.Item>
+                    <ListGroup.Item
+                      as="li"
+                      className="d-flex justify-content-between align-items-start text-center">
                       <div className="ms-auto me-auto">
                         <div className="fw-bold">{coach.tecnico}</div>
                         Tecnico
@@ -54,8 +61,7 @@ const Coaches = () => {
                     </ListGroup.Item>
                     <ListGroup.Item
                       as="li"
-                      className="d-flex justify-content-between align-items-start text-center"
-                    >
+                      className="d-flex justify-content-between align-items-start text-center">
                       <div className="ms-auto me-auto">
                         <div className="fw-bold ">{coach.aux01}</div>
                         Auxíliar Técnico
@@ -63,8 +69,7 @@ const Coaches = () => {
                     </ListGroup.Item>
                     <ListGroup.Item
                       as="li"
-                      className="d-flex justify-content-between align-items-start text-center"
-                    >
+                      className="d-flex justify-content-between align-items-start text-center">
                       <div className="ms-auto me-auto">
                         <div className="fw-bold">{coach.aux02}</div>
                         Preparador Físico

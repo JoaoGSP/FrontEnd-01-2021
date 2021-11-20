@@ -43,6 +43,13 @@ const CoachesForm = (props) => {
         <>
             <Box title="Cadastrar/Editar Comissão Técnica">
                 <Form>
+                    <Form.Group as={Row} className="mb-3" controlId="time">
+                        <Form.Label column sm={2}>Time: </Form.Label>
+                        <Col sm={10}>
+                            <Form.Control type="text" {...register("time", validador.time)} />
+                            {errors.time && <span className="text-danger">{errors.time.message}</span>}
+                        </Col>
+                    </Form.Group>
                     <Form.Group as={Row} className="mb-3" controlId="tecnico">
                         <Form.Label column sm={2}>Técnico: </Form.Label>
                         <Col sm={10}>

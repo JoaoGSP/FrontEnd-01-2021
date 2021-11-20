@@ -37,11 +37,12 @@ const Players = () => {
                             <Card>
                                 <Card.Img variant="top" height={200} src={image} />
                                 <Card.Body>
-                                    <Card.Title className='text-center'>{player.nome}</Card.Title>
+                                    <Card.Title className='text-center'>{player.alcunha}</Card.Title>
                                     <div className="d-grid gap-2">
                                         <ShowCanvasForPlayers
                                             idx={idx}
                                             nome={player.nome}
+                                            alcunha={player.alcunha}
                                             gender={player.gender}
                                             naturalidade={player.naturalidade}
                                             data_nasc={player.data_nasc}

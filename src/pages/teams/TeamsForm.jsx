@@ -52,6 +52,13 @@ const TeamsForm = (props) => {
                             {errors.nome && <span className="text-danger">{errors.nome.message}</span>}
                         </Col>
                     </Form.Group>
+                    <Form.Group as={Row} className="mb-3" controlId="alcunha">
+                        <Form.Label column sm={2}>Alcunha: </Form.Label>
+                        <Col sm={10}>
+                            <Form.Control type="text" {...register("alcunha", validador.alcunha)} />
+                            {errors.alcunha && <span className="text-danger">{errors.alcunha.message}</span>}
+                        </Col>
+                    </Form.Group>
                     <Form.Group as={Row} className="mb-3" controlId="corprim">
                         <Form.Label column xs={2}>Cor Primária: </Form.Label>
                         <Form.Control
@@ -146,10 +153,12 @@ const TeamsForm = (props) => {
                             <Form.Control type="text" {...register("presidente")} />
                         </Col>
                     </Form.Group>
-                    {/* <Form.Group controlId="formFile" className="mb-3">
-                        <Form.Label>Default file input example</Form.Label>
-                        <Form.Control type="file" {...register('image')}/>
-                    </Form.Group> */}
+                    <Form.Group as={Row} className="mb-3" controlId="foto">
+                        <Form.Label column sm={2}>Foto: </Form.Label>
+                        <Col sm={10}>
+                            <Form.Control type="text" {...register("foto")} />
+                        </Col>
+                    </Form.Group>
                     <div className="text-center">
                         <Button variant="success" onClick={handleSubmit(sendData)}><FaCheck /> Salvar</Button>
                         <Link className="btn btn-danger" to="/teams"><FaArrowLeft /> Voltar</Link>

@@ -35,11 +35,12 @@ const Teams = () => {
                             <Card>
                                 <Card.Img variant="top" height={175} src={imagem} />
                                 <Card.Body>
-                                    <Card.Title className='text-center'>{team.nome}</Card.Title>
+                                    <Card.Title className='text-center'>{team.alcunha}</Card.Title>
                                     <div className="d-grid gap-2">
                                         <ShowCanvasForTeams
                                             idx={idx}
                                             nome={team.nome}
+                                            alcunha={team.alcunha}
                                             corprim={team.corprim}
                                             corsec={team.corsec}
                                             mascote={team.mascote}

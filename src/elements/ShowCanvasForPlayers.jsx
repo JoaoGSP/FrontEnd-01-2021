@@ -33,7 +33,7 @@ const ShowCanvasForPlayers = (props) => {
 
             <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
-                    <Offcanvas.Title variant="text-center"><HiOutlineIdentification /> {' '}{props.nome}</Offcanvas.Title>
+                    <Offcanvas.Title variant="text-center"><HiOutlineIdentification /> {' '}{props.alcunha}</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <ListGroup>
