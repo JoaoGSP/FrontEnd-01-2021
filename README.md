@@ -1,6 +1,3 @@
-## Ícones para infos
-## Alimentar as tabelas
-## Refatorar o código
 ## React-router-dom v. 5, não atualizar...
 
 # Getting Started with Create React App
